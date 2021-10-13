@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.github.pagehelper.PageInfo;
-import com.item.util.AppPage;
-import com.item.util.JsonResult;
+import com.github.gencode.bean.AppPage;
+import com.github.gencode.bean.JsonResult;
 import ${entityUrl}.${entityName};
 import ${serviceUrl}.${entityName}Service;
 
@@ -48,7 +48,7 @@ public class ${entityName}Controller {
 	
 	/**
 	 * @explain 查询${entityComment}对象  <swagger GET请求>
-	 * @param   对象参数：id
+	 * @param   id：对象参数
 	 * @return  ${objectName}
 	 * @author  ${author}
 	 * @time    ${createTime}
@@ -79,7 +79,7 @@ public class ${entityName}Controller {
 	
 	/**
 	 * @explain 添加${entityComment}对象
-	 * @param   对象参数：${objectName}
+	 * @param   ${objectName}：对象参数
 	 * @return  int
 	 * @author  ${author}
 	 * @time    ${createTime}
@@ -109,7 +109,7 @@ public class ${entityName}Controller {
 	
 	/**
 	 * @explain 删除${entityComment}对象
-	 * @param   对象参数：id
+	 * @param   id：对象参数
 	 * @return  int
 	 * @author  ${author}
 	 * @time    ${createTime}
@@ -140,7 +140,7 @@ public class ${entityName}Controller {
 	
 	/**
 	 * @explain 修改${entityComment}对象
-	 * @param   对象参数：${objectName}
+	 * @param   ${objectName}：对象参数
 	 * @return  ${objectName}
 	 * @author  ${author}
 	 * @time    ${createTime}
@@ -170,7 +170,7 @@ public class ${entityName}Controller {
 	
 	/**
 	 * @explain 获取匹配${entityComment}
-	 * @param   对象参数：${objectName}
+	 * @param   ${objectName}：对象参数
 	 * @return  List<${entityName}>
 	 * @author  ${author}
 	 * @time    ${createTime}
@@ -194,7 +194,8 @@ public class ${entityName}Controller {
 	
 	/**
 	 * @explain 分页条件查询${entityComment}   
-	 * @param   对象参数：AppPage<${entityName}>
+	 * @param   AppPage<${entityName}>：分页参数
+	 * @param   ${entityName}：对象参数
 	 * @return  PageInfo<${entityName}>
 	 * @author  ${author}
 	 * @time    ${createTime}
@@ -205,13 +206,9 @@ public class ${entityName}Controller {
         @ApiImplicitParam(paramType="query", name = "pageNum", value = "当前页", required = true, dataType = "int"),
         @ApiImplicitParam(paramType="query", name = "pageSize", value = "页行数", required = true, dataType = "int")
     })
-	public JsonResult<PageInfo<${entityName}>> get${entityName}BySearch(Integer pageNum,Integer pageSize){
+	public JsonResult<PageInfo<${entityName}>> get${entityName}BySearch(AppPage<${entityName}> page, ${entityName} ${objectName}){
 		JsonResult<PageInfo<${entityName}>> result=new JsonResult<PageInfo<${entityName}>>();
-		AppPage<${entityName}> page =new AppPage<${entityName}>();
-		page.setPageNum(pageNum);
-		page.setPageSize(pageSize);
 		//其他参数
-		${entityName} ${objectName}=new ${entityName}();
 		page.setParam(${objectName});
 		//分页数据
 		try {

@@ -3,7 +3,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-
     <!-- 继承该依赖，可以少配置很多东西 -->
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -13,7 +12,7 @@
 
     <groupId>tech.fanlinglong.common</groupId>
     <artifactId>full-code-generator</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>mybatis-full-generator</name>

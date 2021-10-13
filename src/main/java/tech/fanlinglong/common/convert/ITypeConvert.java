@@ -4,22 +4,22 @@
  * https://www.apache.org/licenses/LICENSE-2.0
  * <p>
  * @Package: tech.fanlinglong.common.convert
- * @author: flying-cattle  
- * @date: 2019年4月9日 下午8:06:16 
+ * @author: fanlinglong  
+ * @date: 2021年4月9日 下午8:06:16 
  */
 package tech.fanlinglong.common.convert;
 
 /**   
-* Copyright: Copyright (c) 2019 
+* Copyright: Copyright (c) 2021 
 * 
 * <p>说明: 该类的功能描述</p>
 * @version: v1.0.0
-* @author: flying-cattle
+* @author: fanlinglong
 *
 * Modification History:
 * Date         		Author          Version          Description
 *---------------------------------------------------------------*
-* 2019年4月9日      		flying-cattle        v2.0.1           initialize
+* 2021年4月9日      		fanlinglong        v2.0.1           initialize
 */
 public interface ITypeConvert {
 	/**

@@ -1,8 +1,8 @@
 /**   
  * Copyright © 2019 dream horse Info. Tech Ltd. All rights reserved.
  * @Package: tech.fanlinglong.common.convert
- * @author: flying-cattle  
- * @date: 2019年4月9日 下午8:15:25 
+ * @author: fanlinglong  
+ * @date: 2021年4月9日 下午8:15:25 
  */
 package tech.fanlinglong.common.util;
 
@@ -13,16 +13,16 @@ import tech.fanlinglong.common.entity.JsonResult;
 import tech.fanlinglong.common.entity.PropertyInfo;
 
 /**   
- * Copyright: Copyright (c) 2019 
+ * Copyright: Copyright (c) 2021 
  * 
  * <p>说明：  获取文件路径调用创建文件</P>
- * @version: v2.1.0
- * @author: flying-cattle
+ * @version: v1.0.0
+ * @author: fanlinglong
  * 
  * Modification History:
  * Date         	Author          Version          Description
  *---------------------------------------------------------------*
- * 2019年4月9日      		flying-cattle   v2.1.0           initialize
+ * 2021年4月9日      		fanlinglong   v1.0.0           initialize
  */
 public class Generator {
 	//路径信息

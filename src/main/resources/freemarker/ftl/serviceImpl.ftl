@@ -13,14 +13,14 @@ import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.item.util.AppPage;
+import com.github.gencode.bean.AppPage;
 import ${entityUrl}.${entityName};
 import ${daoUrl}.${entityName}Dao;
 import ${serviceUrl}.${entityName}Service;
 
 /**   
  *  
- * @Description:  ${entityComment}——SERVICEIMPL
+ * @Description:  ${entityComment}——SERVICE_IMPL
  * @Author:       ${author}   
  * @CreateDate:   ${createTime}
  * @Version:      ${version}
@@ -28,8 +28,14 @@ import ${serviceUrl}.${entityName}Service;
  */
 @Service
 public class ${entityName}ServiceImpl implements ${entityName}Service {
-	
-	@Autowired
+
+	Logger logger = LoggerFactory.getLogger(this.getClass());
+
+	// 构造注入
+	public ${entityName}ServiceImpl(${entityName}Dao ${objectName}Dao){
+		this.${objectName}Dao = ${objectName}Dao;
+	}
+
 	public ${entityName}Dao ${objectName}Dao;
 	
 	//查询对象

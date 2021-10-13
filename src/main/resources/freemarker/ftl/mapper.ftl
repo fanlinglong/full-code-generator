@@ -31,14 +31,22 @@
 		insert into ${table}
 		<trim prefix="(" suffix=")" suffixOverrides=",">
 			<#list cis as ci>
+			<#if ci.javaType=="String">
+			<if test="${ci.property} != null and ${ci.property}.trim() !='' ">
+			<#else>
 			<if test="${ci.property} != null">
+			</#if>
 				${ci.column},
 			</if>
 			</#list>
 		</trim>
 		<trim prefix="values (" suffix=")" suffixOverrides=",">
 			<#list cis as ci>
+			<#if ci.javaType=="String">
+			<if test="${ci.property} != null and ${ci.property}.trim() !='' ">
+			<#else>
 			<if test="${ci.property} != null">
+			</#if>
 				${r'#{'}${ci.property},jdbcType=${ci.jdbcType?upper_case}},
 			</if>
 			</#list>
@@ -49,7 +57,11 @@
 		update ${table}
 		<set>
 			<#list cis as ci>
+			<#if ci.javaType=="String">
+			<if test="${ci.property} != null and ${ci.property}.trim() !='' ">
+			<#else>
 			<if test="${ci.property} != null">
+			</#if>
 				${ci.column} = ${r'#{'}${ci.property},jdbcType=${ci.jdbcType?upper_case}},
 			</if>
 			</#list>
@@ -68,7 +80,11 @@
 			</if>
 			<#list cis as ci>
 			<#if ci.column!="id">
-			<if test="${ci.property}  != null">
+			<#if ci.javaType=="String">
+			<if test="${ci.property} != null and ${ci.property}.trim() !='' ">
+			<#else>
+			<if test="${ci.property} != null">
+			</#if>
 				AND ${ci.column} = ${r'#{'}${ci.property} ,jdbcType=${ci.jdbcType?upper_case}}
 			</if>
 			</#if>

@@ -1,22 +1,22 @@
 /**   
  * Copyright © 2019 dream horse Info. Tech Ltd. All rights reserved.
  * @Package: tech.fanlinglong.common.convert
- * @author: flying-cattle  
- * @date: 2019年4月9日 下午8:15:25 
+ * @author: fanlinglong  
+ * @date: 2021年4月9日 下午8:15:25 
  */
 package tech.fanlinglong.common.convert;
 
 /**   
- * Copyright: Copyright (c) 2019 
+ * Copyright: Copyright (c) 2021 
  * 
  * <p>说明： 数据库时间类型 到 实体类时间类型 对应策略</P>
- * @version: v2.1.0
- * @author: flying-cattle
+ * @version: v1.0.0
+ * @author: fanlinglong
  * 
  * Modification History:
  * Date         	Author          Version          Description
  *---------------------------------------------------------------*
- * 2019年4月9日      		flying-cattle   v2.1.0           initialize
+ * 2021年4月9日      		fanlinglong   v1.0.0           initialize
  */
 public enum DateType {
     /**

@@ -21,14 +21,14 @@ import ${entityUrl}.${entityName};
 @Mapper
 public interface ${entityName}Dao {
 	
-	public ${entityName} selectByPrimaryKey(${idType} id);
+	${entityName} selectByPrimaryKey(${idType} id);
 	
-	public int deleteByPrimaryKey(${idType} id);
+	int deleteByPrimaryKey(${idType} id);
 	
-	public int insertSelective(${entityName} ${objectName});
+	int insertSelective(${entityName} ${objectName});
 	
-	public int updateByPrimaryKeySelective(${entityName} ${objectName});
+	int updateByPrimaryKeySelective(${entityName} ${objectName});
 	
-	public List<${entityName}> query${entityName}List(${entityName} ${objectName});
+	List<${entityName}> query${entityName}List(${entityName} ${objectName});
 }
 	

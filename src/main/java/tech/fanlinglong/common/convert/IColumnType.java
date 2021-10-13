@@ -4,22 +4,22 @@
  * https://www.apache.org/licenses/LICENSE-2.0
  * <p>
  * @Package: tech.fanlinglong.common.convert
- * @author: flying-cattle 
- * @date: 2019年4月9日 下午8:09:35 
+ * @author: fanlinglong 
+ * @date: 2021年4月9日 下午8:09:35 
  */
 package tech.fanlinglong.common.convert;
 
 /**   
-* Copyright: Copyright (c) 2019 
+* Copyright: Copyright (c) 2021 
 * 
 * <p>说明： 获取实体类字段属性类信息接口</p>
-* @version: v2.1.0
-* @author: flying-cattle
+* @version: v1.0.0
+* @author: fanlinglong
 *
 * Modification History:
 * Date         		Author          Version          Description
 *---------------------------------------------------------------*
-* 2019年4月9日      		flying-cattle   v2.1.0           initialize
+* 2021年4月9日      		fanlinglong   v1.0.0           initialize
 */
 public interface IColumnType {
 	/**

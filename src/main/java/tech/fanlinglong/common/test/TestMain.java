@@ -8,30 +8,33 @@ import tech.fanlinglong.common.util.EntityInfoUtil;
 import tech.fanlinglong.common.util.Generator;
 import tech.fanlinglong.common.util.MySqlToJavaUtil;
 
+/**
+ * 生成源代码
+ */
 public class TestMain {
 
   //基础信息
-  public static final String PROJECT = "wifi";
+  public static final String PROJECT = "cloud";
   public static final String AUTHOR = "fanll";
   public static final String VERSION = "V1.0";
   //数据库连接信息
-  public static final String URL = "jdbc:mariadb://192.168.0.10:3306/db_wifi";
+  public static final String URL = "jdbc:mysql://127.0.0.1:3306/novel_cloud?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true";
   public static final String NAME = "root";
   public static final String PASSWORD = "123456";
-  public static final String DATABASE = "db_wifi";
+  public static final String DATABASE = "novel_cloud";
   //类信息
-  public static final String TABLE = "tb_mac";
-  public static final String CLASS_NAME = "MAC";
-  public static final String CLASS_COMMENT = "终端数据表";
-  public static final String TIME = "2021年8月26日";
+  public static final String TABLE = "author";
+  public static final String CLASS_NAME = "author";
+  public static final String CLASS_COMMENT = "作者表";
+  public static final String TIME = "2021年10月25日";
   public static final String AGILE = new Date().getTime() + "";
   //路径信息
-  public static final String ENTITY_URL = "tech.fanll.wifi.demo.entity";
-  public static final String DAO_URL = "tech.fanll.wifi.demo.dao";
+  public static final String ENTITY_URL = "tech.fanll.cloud.demo.entity";
+  public static final String DAO_URL = "tech.fanll.cloud.demo.dao";
   public static final String DAO_IMPL_URL = "mappers";
-  public static final String SERVICE_URL = "tech.fanll.wifi.demo.service";
-  public static final String SERVICE_IMPL_URL = "tech.fanll.wifi.demo.service.impl";
-  public static final String CONTROLLER_URL = "tech.fanll.wifi.demo.controller";
+  public static final String SERVICE_URL = "tech.fanll.cloud.demo.service";
+  public static final String SERVICE_IMPL_URL = "tech.fanll.cloud.demo.service.impl";
+  public static final String CONTROLLER_URL = "tech.fanll.cloud.demo.controller";
 
 
   public static void main(String[] args) {
@@ -43,12 +46,12 @@ public class TestMain {
     bi.setEntityComment(CLASS_COMMENT);
     try {
       bi = EntityInfoUtil.getInfo(bi);
-      String aa1 = Generator.createEntity("D:\\fanll\\wifi\\", bi).toString();
-      String aa2 = Generator.createDao("D:\\fanll\\wifi\\", bi).toString();
-      String aa3 = Generator.createDaoImpl("D:\\fanll\\wifi\\", bi).toString();
-      String aa4 = Generator.createService("D:\\fanll\\wifi\\", bi).toString();
-      String aa5 = Generator.createServiceImpl("D:\\fanll\\wifi\\", bi).toString();
-      String aa6 = Generator.createController("D:\\fanll\\wifi\\", bi).toString();
+      String aa1 = Generator.createEntity("D:\\fanll\\cloud\\", bi).toString();
+      String aa2 = Generator.createDao("D:\\fanll\\cloud\\", bi).toString();
+      String aa3 = Generator.createDaoImpl("D:\\fanll\\cloud\\", bi).toString();
+      String aa4 = Generator.createService("D:\\fanll\\cloud\\", bi).toString();
+      String aa5 = Generator.createServiceImpl("D:\\fanll\\cloud\\", bi).toString();
+      String aa6 = Generator.createController("D:\\fanll\\cloud\\", bi).toString();
 
       System.out.println(aa1);
       System.out.println(aa2);

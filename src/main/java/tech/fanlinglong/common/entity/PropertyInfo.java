@@ -30,14 +30,22 @@ import lombok.NoArgsConstructor;
 public class PropertyInfo implements Serializable{
 	
 	private static final long serialVersionUID = 123124L;
-	
+
+	// 数据库字段
 	private String column;
 
+	// 数据库字段类型
 	private String jdbcType;
-	 
+
+	// 数据库字段备注
 	private String comment;
-	 
+
+	// java 字段
 	private String property;
-	 
+
+	// java 字段（首字母大写）
+	private String upFiled;
+
+	// java类型
 	private String javaType;
 }

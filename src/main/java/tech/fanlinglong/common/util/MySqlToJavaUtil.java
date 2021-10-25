@@ -29,11 +29,11 @@ public class MySqlToJavaUtil {
      */
 	public static String getClassName(String table) {
 		table=changeToJavaFiled(table);
-		StringBuilder sbuilder = new StringBuilder();
+		StringBuilder builder = new StringBuilder();
 		char[] cs = table.toCharArray();
 		cs[0] -= 32;
-		sbuilder.append(String.valueOf(cs));
-		return sbuilder.toString();
+		builder.append(String.valueOf(cs));
+		return builder.toString();
 	}
 	
 	/**
@@ -43,13 +43,13 @@ public class MySqlToJavaUtil {
      */
 	public static String changeToJavaFiled(String field) {
 		String[] fields = field.split("_");
-		StringBuilder sbuilder = new StringBuilder(fields[0]);
+		StringBuilder builder = new StringBuilder(fields[0]);
 		for (int i = 1; i < fields.length; i++) {
 			char[] cs = fields[i].toCharArray();
 			cs[0] -= 32;
-			sbuilder.append(String.valueOf(cs));
+			builder.append(String.valueOf(cs));
 		}
-		return sbuilder.toString();
+		return builder.toString();
 	}
 	
 

@@ -59,6 +59,7 @@ public class EntityInfoUtil {
         }
         ci.setComment(comment);
         ci.setProperty(MySqlToJavaUtil.changeToJavaFiled(column));
+        ci.setUpFiled(MySqlToJavaUtil.getClassName(ci.getProperty()));
         ci.setJavaType(MySqlToJavaUtil.jdbcTypeToJavaType(jdbcType));
         //设置注解类型
         if ("id".equalsIgnoreCase(column)) {

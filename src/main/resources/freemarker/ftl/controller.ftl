@@ -1,7 +1,7 @@
 /**
  * @filename:${entityName}Controller ${createTime}
  * @project ${project}  ${version}
- * Copyright(c) 2018 ${author} Co. Ltd. 
+ * Copyright(c) 2021 ${author} Co. Ltd.
  * All right reserved. 
  */
 package ${controllerUrl};
